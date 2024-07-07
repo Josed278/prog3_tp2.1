@@ -1,6 +1,34 @@
-class Customer {}
+class Customer {
+    constructor(id, name, email){
+        this.id=id;
+        this.name=name;
+        this.email=email;
+    }
+    get info(){
+        return `Nombre: ${this.name}, Email: ${this.email}`;
+    }
+}
 
-class Reservation {}
+class Reservation {
+    customer = new Customer();
+    constructor(id, customer, date, guests){
+        this.id=id;
+        this.customer=customer;
+        this.date=date;
+        this.guests=guests;
+
+    }
+    get info(){
+        return `Fecha y hora: ${this.date} , Cliente: ${this.customer.name}; Invitados: ${this.guests}`;
+    }
+    static validateReservation(reservationDate, guests){
+        const reserva = new Date(reservationDate);
+        const fechaHoy = new Date();
+        if(guests <= 0 || reserva < fechaHoy){
+            return false;
+        }else return true;
+    }
+}
 
 class Restaurant {
     constructor(name) {
