@@ -102,8 +102,8 @@ document
 
 const restaurant = new Restaurant("El Lojal Kolinar");
 
-const customer1 = new Customer(1, "Shallan Davar", "shallan@gmail.com");
-const reservation1 = new Reservation(1, customer1, "2024-12-31T20:00:00", 4);
+const customer1 = new Customer(1, "Juan Gonzales", "juanGonzales@gmail.com");
+const reservation1 = new Reservation(1, customer1, "2024-07-31T20:00:00", 4);
 
 if (Reservation.validateReservation(reservation1.date, reservation1.guests)) {
     restaurant.addReservation(reservation1);
