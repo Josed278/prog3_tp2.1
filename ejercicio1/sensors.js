@@ -18,7 +18,7 @@ class Sensor {
     }
     set updateValue(value){
         this.value = value;
-        //this.updatedAt = new Date().toString();
+        
 
     }
 
