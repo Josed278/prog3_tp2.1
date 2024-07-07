@@ -3,6 +3,9 @@ class Currency {
         this.code = code;
         this.name = name;
     }
+    getFullName() {
+        return `${this.code} - ${this.name}`;
+    }
 }
 
 class CurrencyConverter {
